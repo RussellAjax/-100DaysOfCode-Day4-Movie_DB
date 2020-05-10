@@ -6,7 +6,7 @@ app = Flask(__name__)
 #Setting the configuration of MongoDB database.
 #The host is in the format of: <host-url>/<database-name>
 app.config['MONGODB_SETTINGS'] = {
-        'host': 'mongodb://localhost/#100DaysOfCode-Day4-Movie_DB' #Our database name is Movie_DB
+        'host': 'mongodb://localhost/Movie_DB' #Our database name is Movie_DB
         }
 initialize_db(app)
 
