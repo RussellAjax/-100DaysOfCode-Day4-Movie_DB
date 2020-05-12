@@ -12,7 +12,7 @@ app.config['MONGODB_SETTINGS'] = {
 initialize_db(app)
 
 #Using API tester to the path of `/movies` will output the list above
-@app.route('/movies', methods=['GET'])
+@app.route('/movies')
 def get_movies():
     movies = Movie.objects().to_json()
     return Response(movies, mimetype="applicaton/json", status = 200)
@@ -39,7 +39,7 @@ def delete_movie(id):
     return '', 200
 
 #Create request to see only one movie
-@app.route('/movies/<id>', methods=['GET'])
+@app.route('/movies/<id>')
 def get_movie(id):
     movie = Movie.objects.get(id=id).to_json()
     return Response(movie, mimetype="application/json", status=200)
