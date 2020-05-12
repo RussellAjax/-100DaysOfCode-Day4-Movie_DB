@@ -7,8 +7,7 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-flask-mongoengine = "*"
-flask-restful = "*"
+flask-monoengine = "*"
 
 [requires]
 python_version = "3.7"
